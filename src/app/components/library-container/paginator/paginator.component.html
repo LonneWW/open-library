@@ -1,0 +1,9 @@
+<mat-paginator
+  [hidePageSize]="true"
+  [length]="length"
+  [pageSize]="12"
+  [pageIndex]="pageIndex"
+  (page)="handlePageEvent($event)"
+  #paginator
+  id="paginator"
+></mat-paginator>

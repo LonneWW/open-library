@@ -1,4 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+$primary-color: #51424e;
+$secondary-color: #c97f48;
+$accent-color: #ffabf3;
+$primary-bg-color: #51424e;
+$secondary-bg-color: #b7a6b4;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: $primary-bg-color;
+  #search-bar-container {
+    border: 2px ridge $accent-color;
+    // background-color: #4e444b;
+    // button {
+    //   background-color: grey;
+    // }
+  }
+  #paginator {
+    background-color: $secondary-bg-color;
+  }
+  .list-container {
+    background-color: $secondary-color;
+    .list-item {
+      h4 {
+        font-family: "Tinos", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: larger;
+      }
+      span {
+        font-family: "Quintessential", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: medium;
+      }
+    }
+  }
+  .dialog-container {
+    .dialog {
+      color: $accent-color;
+      background-color: $primary-bg-color;
+    }
+  }
+}

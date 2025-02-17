@@ -7,11 +7,17 @@ import { HttpClient } from '@angular/common/http';
 export class HttpService {
   constructor(private http: HttpClient) {}
 
-  getBooksList(subject: string) {
-    return this.http.get(`${environment.apiEndPoint}/subjects/${subject}.json`);
+  getBooksList(subjectEndpoint: string, page = 0) {
+    let query: string;
+    if (page >= 1) {
+      query = `?offset=${page * 12}`;
+    } else {
+      query = '';
+    }
+    return this.http.get(subjectEndpoint + '.json' + `${query}`);
   }
 
   getBookDetails(key: string) {
-    return this.http.get(`${environment.apiEndPoint}/works/${key}.json`);
+    return this.http.get(`${environment.apiEndPoint}` + `${key}.json`);
   }
 }

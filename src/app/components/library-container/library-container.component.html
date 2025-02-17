@@ -1,0 +1,11 @@
+<div class="library" [ngClass]="animationToggle ? 'visible' : 'hidden'">
+  <app-paginator></app-paginator>
+  <app-books-list
+    (descriptionButtonClicked)="displayDescription($event)"
+  ></app-books-list>
+  <app-book-description
+    [bookDetails]="bookDetails"
+    [showDialog]="showDialog"
+    (closingDialog)="closeDialog()"
+  ></app-book-description>
+</div>

@@ -1,0 +1,15 @@
+<div class="dialog-container" *ngIf="showDialog">
+  <mat-spinner *ngIf="!bookDetails"></mat-spinner>
+  <div class="dialog" *ngIf="bookDetails">
+    <button
+      mat-button
+      cdkFocusInitial
+      (click)="onCloseDialog()"
+      id="close-dialog-btn"
+    >
+      Close
+    </button>
+    <h2>Book Description:</h2>
+    <p [innerHTML]="bookDetails"></p>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+.library {
+  transition: all 0.8s;
+  margin: 0 auto;
+  width: 60%;
+  padding: 8.5em 2em 4em 2em;
+}
+
+.hidden {
+  opacity: 0%;
+}
+
+.visible {
+  opacity: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .library {
+    width: 80%;
+  }
+}

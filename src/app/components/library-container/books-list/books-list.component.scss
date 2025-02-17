@@ -1,0 +1,22 @@
+.list-container {
+  padding-bottom: 2em;
+  border-radius: 0 0 20px 20px;
+  .list-item {
+    span {
+      width: 90%;
+    }
+    .description-btn {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+    }
+  }
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateX(50%);
+  transform: translateY(-50%);
+}

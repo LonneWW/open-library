@@ -1,0 +1,20 @@
+<mat-list class="list-container" *ngIf="books">
+  <mat-list-item *ngFor="let book of books" class="list-item" [lines]="3">
+    <h4 matListItemTitle [attr.title]="book.title">{{ book.title }}</h4>
+    <span
+      matListItemLine
+      [attr.title]="this.buildAuthorsString(book.authors)"
+      >{{ this.buildAuthorsString(book.authors) }}</span
+    >
+    <button
+      mat-icon-button
+      title="Book's description"
+      class="description-btn"
+      (click)="onDescriptionButtonClick(book.key)"
+    >
+      <mat-icon>description</mat-icon>
+    </button>
+    <hr />
+  </mat-list-item>
+</mat-list>
+<mat-spinner *ngIf="books.length < 1" class="spinner"></mat-spinner>
